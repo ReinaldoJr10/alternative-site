@@ -15,7 +15,7 @@ let Navbar = {
                         </a>
                     </div>
 
-                    <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
+                    <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="true">
                         <div class="navbar-start">
                             <a class="navbar-item" href="/#/">
                                 Home
@@ -33,9 +33,9 @@ let Navbar = {
                                     <a class="button is-primary" href="/#/register">
                                         <strong>Sign up</strong>
                                     </a>
-                                    <a class="button is-light">
-                                        Log in
-                                    </a>
+                                    <a class="button is-light" href="/#/login">
+                                        Sing in
+                                    </a> </a>
                                 </div>
                             </div>
                         </div>

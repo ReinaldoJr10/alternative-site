@@ -5,8 +5,9 @@ import About        from './views/pages/About.js'
 import Error404     from './views/pages/Error404.js'
 import PostShow     from './views/pages/PostShow.js'
 import Register     from './views/pages/Register.js'
+import Login        from './views/pages/login.js'
 
-//import Body         from './views/components/Body.js';
+
 import Navbar       from './views/components/Navbar.js'
 import Bottombar    from './views/components/Bottombar.js' 
 
@@ -18,18 +19,23 @@ const routes = {
     , '/about'      : About
     , '/p/:id'      : PostShow
     , '/register'   : Register
+    , '/login'      : Login
 };
 
+document.body.innerHTML = '<div id="header_container"></div><div id="page_container" class="container pageEntry" ><article> Loading....</article></div><div id="footer_container"></div>';
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
 
     // Lazy load view element:
+    //const frame = null || document.getElementById('frame_container')
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
     const footer = null || document.getElementById('footer_container');
     
     // Render the Header and footer of the page
+    //frame.innerHTML = await Body.render();
+    //await Body.after_render();
     header.innerHTML = await Navbar.render();
     await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
